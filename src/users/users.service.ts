@@ -13,4 +13,8 @@ export class UsersService {
         return await createdUser.save();
     }
 
+    async findOne(email:string):Promise<User>{
+        return this.userModel.findOne({email}).exec();
+    }
+
 }
